@@ -35,6 +35,9 @@ $noscript = false;
 if (isset($_GET['page'])) {
 	$page = $_GET['page'];
 }
+else if (isset($_POST['page_id'])) {
+	$page = $_POST['page_id'];
+}
 if (isset($_GET['noscript'])) {
 	$noscript = !!$_GET['noscript'];
 }
@@ -80,7 +83,6 @@ if (isset($_POST['user_assertion_hash'])) {
 				}
 
 				$_SESSION['lastCommentTime'] = $commTime;
-				$page = isset($_SESSION['page']) ? $_SESSION['page'] : $page;
 				session_write_close();
 
 				$comment = require_param('comment', 'comment');
@@ -119,7 +121,6 @@ if (isset($_POST['user_assertion_hash'])) {
 				session_start();
 				$_SESSION['lastCommentTime'] = 0;
 				$_SESSION['sessStart'] = $sesstart;
-				$page = isset($_SESSION['page']) ? $_SESSION['page'] : $page;
 				session_write_close();
 				
 				$comments = Database::getInstance()->getTable(
@@ -156,8 +157,15 @@ if (isset($_POST['user_assertion_hash'])) {
 					$where[] = '(`page_id` = :p'.$i.' and `id` > :m'.$i.')';
 				}
 				
-				$comments = Database::getInstance()->getTable("SELECT count(*) as `new_com_count`, `name`, `comment`, `page_id` FROM `comments_kb` where ".implode(' or ', $where)." group by `page_id` order by `date` desc;", $args);
-
+				$comments = Database::getInstance()->getTable(
+					"SELECT count(*) as `new_com_count`, `name`, `comment`, `page_id`
+						FROM `comments_kb`
+						where ".implode(' or ', $where)."
+						group by `page_id`
+						order by `date` desc;"
+					, $args
+				);
+				
 				apiResult(true, array(
 					'message' => 'OK'
 					, 'subdata' => $comments
@@ -176,15 +184,13 @@ else {
 	$pageContentUrl = 'pages/404.php';
 }
 
-session_start();
-$_SESSION['page'] = $page;
-session_write_close();
-
 $pageContent = file_get_contents($pageContentUrl);
 $headerContent = "";
+
 if ($pageContent == false) {
 	$pageContent = "Ошибка отображения страницы";
-} else {
+}
+else {
 	$pageSplit = explode("<!---/HEAD---->", $pageContent);
 	if (count($pageSplit) > 1) {
 		$headerContent = $pageSplit[0];
@@ -470,6 +476,7 @@ $(function() {
 				, user_assertion_hash: _UAH
 				, name: usernameField$.val()
 				, comment: textField$.val()
+				, page_id: _page_id
 			}
 			if (replyId) {
 				opts.answer_to = replyId
@@ -485,7 +492,10 @@ $(function() {
 		function sub() {
 			jqt = $(this)
 			checkCookie('Чтобы отображать оповещения о новых комментариях к новостям, мы используем куки.', function() {
-				CookieObject.Subscriptions.push({ page_id: _page_id, last_id: commLastId })
+				CookieObject.Subscriptions.push({
+					page_id: _page_id
+					, last_id: commLastId
+				})
 				subscription = CookieObject.Subscriptions.length - 1
 				document.cookie = 'Subscriptions=' + JSON.stringify(CookieObject.Subscriptions) + '; expires=' + cookieExpDate;
 				jqt.parent().append($(unsubHtml).click(unsub))
@@ -541,6 +551,7 @@ $(function() {
 		api_request({
 			options: {
 				action: 'get_comments'
+				, page_id: _page_id
 				, user_assertion_hash: true
 			}
 			, onSuccess: function(data) {
