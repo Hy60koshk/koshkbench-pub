@@ -1,0 +1,417 @@
+body {
+	background: url("https://koshk.ru/koshkbench/img/koshkbench_bg1.jpg") top repeat #f9f9f9 !important;
+}
+
+a,body,div,input,p,span,td,h2,h1 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+}
+
+h2 {
+	color: #40464a;
+}
+
+.commentEditor a,body,div,input,p,span,td,h2,h1 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+}
+
+.commentEditor textarea {
+	font-family: Consolas, monospace !important;
+}
+
+.kbsectionheader, .bigButton {
+	font-size: 15px;
+}
+
+body, input, .post-body {
+	font-size: 14px !important;
+}
+
+#preview-actions, #upload-simple-photo-form p {
+	font-size: 13px !important;
+}
+
+.post-footer {
+	font-size: 12px !important;
+}
+
+.extraInfo {
+	font-size: 11px !important;
+}
+
+.cap-top {
+	background-color: transparent !important;
+}
+
+.post-body a{
+	text-decoration: underline;
+}
+
+.tdtop, .tdtopright {
+	border-left: 3px solid #1177CC;
+	border-bottom: 3px solid #1177CC;
+	border-top: 3px solid #1177CC;
+	padding: 4px;
+}
+.tdtopright {
+	border-right: 3px solid #1177CC;
+}
+.tda, .tdaright {
+	padding: 4px;
+	border-left: 2px solid #1177CC;
+	border-bottom: 2px solid #1177CC;
+}
+.tdaright {
+	border-right: 2px solid #1177CC;
+}
+.tdtwol {
+	border-bottom: 2px solid #1177CC;
+	border-right: 1px solid #1177CC;
+	padding: 4px;
+}
+.tdtwor {
+	border-bottom: 2px solid #1177CC;
+	border-left: 1px solid #1177CC;
+	padding: 4px;
+}
+
+.copypaste {
+    background-color: #ddd;
+    font-family: consolas, monospace;
+}
+
+.KBMenu {
+	background: #387EB8 url(https://koshk.ru/koshkbench/img/kbmenuBG.png) repeat-x;
+	text-align: center;
+	width: 780px;
+	border: 2px #1D7AC8 solid;
+	border-radius: 0px 0px 8px 8px;
+	font-size: 15px;
+	border-top: none;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.64);
+	margin-bottom: 4px;
+}
+.KBMenuItem {
+	color: #eee;
+	text-shadow: 0 1px 3px #345;
+	height: 32px;
+	display: flex;
+	place-content: center;
+	align-items: center;
+}
+.KBMenuItem:hover {
+	color: #fff;
+	background-color: rgba(225, 240, 255, 0.16);
+}
+.KBMenu a:hover {
+	text-decoration: none;
+}
+.KBMenuItem > table td {
+	vertical-align: middle;
+}
+
+.KBDDArrow {
+	background-image: url('https://koshk.ru/koshkbench/img/expand_arrow_block.png');
+}
+
+.KBDDArrowHover {
+	background-image: url('https://koshk.ru/koshkbench/img/expand_arrow_menu_hover_aa1.png');
+}
+
+.KBDDArrow, .KBDDArrowHover {
+	min-width: 21px;
+	max-width: 21px;
+	min-height: 21px;
+}
+
+.KBDDMenu {
+	display: none;
+	position: absolute;
+	background: #387EB8 url(https://koshk.ru/koshkbench/img/kbmenuBG.png) repeat-x;
+	border-left: 2px #1D7AC8 solid;
+	border-right: 2px #1D7AC8 solid;
+	border-radius: 0 0 8px 8px;
+	font-size: 15px;
+	color: #eee;
+	min-width: 712px;
+	box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.64);
+	z-index: 60;
+}
+
+.KBDDMenu table {
+	border-radius: 0 0 8px 8px;
+	background-color: rgba(56, 128, 184, 0.33);
+}
+
+.KBDDMenu a, .KBDDMenu a:visited, .KBDDMenu a:active {
+	color: #eee !important;
+	text-decoration: none;
+}
+
+.KBDDMenu a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.KBDDMenu td {
+	border-bottom: 2px #1D7AC8 solid;
+	text-align: center;
+}
+
+.KBDDMenu .KBDDRightTd {
+	border-left: 2px #1D7AC8 solid;
+}
+
+.KBDDMenu div {
+	padding: 6px 0 3px 0;
+}
+
+.KBDDMenu div:hover {
+	background-color: rgba(225, 240, 255, 0.16);
+}
+
+.KBNewsTable td {
+	border-bottom: 1px #ddd solid;
+	padding-top: 3px;
+	padding-bottom: 1px;
+	font-size: 12px;
+}
+
+.KBDate {
+	color: #1050a0;
+	padding-right: 5px;
+}
+
+.KBNewsTable .KBDate {
+	font-size: 11px !important;
+}
+
+.previewImg {
+	cursor: zoom-in;
+	border: 2px outset #808080;
+	border-radius: 4px;
+	padding: 0px;
+	margin-right: 4px;
+}
+
+.maximizedImgDescr {
+	color: #ccc;
+	text-shadow: 2px 2px 3px #000;
+	box-shadow: 2px 1px 8px #000;
+	/*background: transparent;*/
+	background-color: #20202b;
+	padding: 8px 12px 10px 8px;
+	font-size: 14px;
+	margin: 0px 8px;
+}
+
+.maximizedImg {
+	border-radius: 6px;
+	box-shadow: 2px 1px 8px #000;
+	background-color: #303040;
+	cursor: zoom-out;
+}
+
+.dlGoogle {
+	background: url('https://koshk.ru/koshkbench/dlicons/gdrive.png') transparent left no-repeat;
+	padding-left: 20px;
+}
+
+.dlMediafire {
+	background: url('https://koshk.ru/koshkbench/dlicons/mediafire.png') transparent left no-repeat;
+	padding-left: 20px;
+}
+
+.dlFontstruct {
+	background: url('https://koshk.ru/koshkbench/dlicons/fontstruct.png') transparent left no-repeat;
+	padding-left: 20px;
+}
+
+.dlDirect {
+	background: url('https://koshk.ru/koshkbench/dlicons/direct1.png') transparent left no-repeat;
+	padding-left: 20px;
+}
+
+.dlYadisk {
+	background: url('https://koshk.ru/koshkbench/dlicons/yadisk.png') transparent left no-repeat;
+	padding-left: 20px;
+}
+
+.dlTable td {
+	padding: 6px 6px 4px 0px;
+	border-bottom: 1px solid #1170B9;
+	font-size: 13.3px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.dlSubTable td {
+	vertical-align: top;
+	border: none;
+}
+
+.picSubTable td {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #303040;
+	cursor: zoom-in;
+	border: 2px outset #808080;
+	border-radius: 4px;
+	padding: 0px;
+	margin: 4px;
+}
+
+.dlButton, .pseudoDlButton {
+	border: 1px solid #1170B9;
+	border-radius: 4px;
+	min-height: 21px !important;
+	color: #1170B9;
+	cursor: pointer;
+}
+
+.dlButton {
+	padding: 2px 4px 2px 20px;
+}
+.pseudoDlButton {
+	padding: 2px 12px 2px 12px;
+}
+
+.bigButton {
+	padding: 3px 5px 3px 20px !important;
+}
+
+.dlButton:hover, .pseudoDlButton:hover {
+	background-color: #1170B9;
+	text-decoration: none;
+	color: #fff;
+}
+
+.dlButton a {
+	text-decoration: none;
+}
+.dlButton a:hover {
+	text-decoration: none;
+}
+.closeButton a:hover {
+	text-decoration: none;
+}
+
+.closeButton, .dialogCloseButton {
+	background: #1170B9;
+	color: #fff;
+	padding: 6px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	right: 4px;
+	top: 4px;
+	position: absolute;
+	max-width: 80px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.closeButton:hover, .dialogCloseButton:hover {
+	background-color: #fff;
+	color: #1170B9;
+	border: 1px solid #1170B9;
+}
+
+.Mediafire {
+	background: url('https://koshk.ru/koshkbench/dlicons/mediafire.png') transparent left no-repeat;
+}
+
+.Mediafire:hover {
+	background-image: url('https://koshk.ru/koshkbench/dlicons/mediafire_white.png');
+}
+
+.Yadisk {
+	background: url('https://koshk.ru/koshkbench/dlicons/yadisk.png') transparent left no-repeat;
+}
+
+.Yadisk:hover {
+	background-image: url('https://koshk.ru/koshkbench/dlicons/yadisk_white.png');
+}
+
+.Direct {
+	background: url('https://koshk.ru/koshkbench/dlicons/direct.png') transparent left no-repeat;
+}
+
+.Direct:hover {
+	background-image: url('https://koshk.ru/koshkbench/dlicons/direct_white.png');
+}
+
+.GDrive {
+	background: url('https://koshk.ru/koshkbench/dlicons/gdrive.png') transparent left no-repeat;
+}
+
+.comment-content {
+	text-align: left !important;
+}
+
+.kbcode {
+	font-family: Consolas, monospace;
+	background-color: rgba(128, 128, 128, 0.15);
+}
+
+.kbHidden {
+	display: none;
+	border: 1px solid #ace;
+	padding: 6px;
+}
+
+.kbHider {
+	border: 1px solid #ace;
+	background-color: #def;
+	padding: 4px;
+	cursor: pointer;
+}
+.kbHider:hover {
+	background-color: #bdf;
+}
+
+.kbPspan {
+	background: url('https://koshk.ru/koshkbench/img/p.png') transparent left no-repeat;
+}
+
+.kbHint {
+	background-color: #2179C2;
+	min-height: 20px;
+	width: 160px !important;
+	position: absolute;
+	z-index: 76;
+	display: none;
+}
+
+.kbDisclaimer {
+	background-color: #fff;
+	padding: 16px;
+	border-radius: 4px;
+	max-width: 640px;
+}
+
+#kbGlobOverlay {
+	background-color: rgba(0, 1, 2, 0.66);
+}
+
+#kbGlobOverlay .KBDDMenu {
+	z-index: 83;
+}
+
+#kbImgFrame {
+	background: transparent;
+	border-radius: 4px;
+}
+
+#kbHiddenContentContainer {
+	display: none;
+}
+#kbDialog {
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 32px;
+	border: 2px #f0f0f0 solid;
+	max-width: 720px;
+	width: 720px;
+	word-wrap: break-word;
+	font-family: Consolas, 'Lucida Console', monospace;
+}
